@@ -45,6 +45,21 @@ This is mainly about installing OpenWRT on the Wyse 3040, but I wanted to includ
 * **lspci - PCI** [lspci.txt](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/notes/lspci.txt?token=GHSAT0AAAAAABTRQNXQLILXPEOHE2AN37DQYUW4LWA)
 * **pacmd - Audio** [pacmd.txt](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/notes/pacmd.txt?token=GHSAT0AAAAAABTRQNXQB4UFOPRH6KLZF7SUYUXAXAA)
 
+## Boot Options
+
+* F2 - Boots BIOS
+* F12 - Boot Menu
+
+## BIOS Updates
+
+My unit would not let me update to 1.2.5 from 1.2.4, no clue why. It just showed `<invalid>` in the updater.
+
+* Download from Dell: https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers
+* Unzip it if it is zipped.
+* Copy to a USB flash drive, FAT32 formatted.
+* Boot the with F12 key.
+* Follow instructions on screen.
+
 ## BIOS Setup
 
 * Enter BIOS with F12 
