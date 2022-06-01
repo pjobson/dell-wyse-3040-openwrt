@@ -228,9 +228,32 @@ This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-b
 
 ### Device
 
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/front.jpg)
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/rear.jpg)
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/angle.jpg)
+**External**
+
+![Front](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/front.jpg)
+![Rear](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/rear.jpg)
+![Angle](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/angle.jpg)
+
+**Board**
+
+![Top](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/unit-top-full.jpg)
+![Bottom](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/unit-bottom-full.jpg)
+
+**CPU**
+
+![CPU](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/cpu.jpg)
+
+**SDIO**
+
+![SDIO](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/sdio-m2.jpg)
+
+**Clear CMOS**
+
+![Clear CMOS](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/clear-cmos.jpg)
+
+**Clear Passwords**
+
+![Clear Passwords](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/passwd-clear.jpg)
 
 ### OpenWRT
 
