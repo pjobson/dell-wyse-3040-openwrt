@@ -183,11 +183,3 @@ antiX is probably a better option as the minimum system requirements are 256MB R
 
 This person has done some work with VyOS [https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
 
-## Images
-
-![Front](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/front.jpg?token=GHSAT0AAAAAABTRQNXRPZA6H55AWZKHGFAYYUXAZIQ)
-![Rear](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/rear.jpg?token=GHSAT0AAAAAABTRQNXRXY4DH6ASIB7PZF4KYUXA2OQ)
-
-![LUCI Status](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/luci_status.png?token=GHSAT0AAAAAABTRQNXRRQ6BWHXTM24SVNWQYUXA27A)
-
-![neofetch](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/neofetch.png?token=GHSAT0AAAAAABTRQNXQW4XSDFQFX3SDHOYYYUXA3RA)
