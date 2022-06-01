@@ -79,7 +79,7 @@ make menuconfig
 # Make your kernel config
 make kernel_menuconfig
 # Otherwise download my config:
-
+wget "https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/config/config?token=GHSAT0AAAAAABTRQNXRKMMNAU3TGNBJGEREYUW7HAA" -O .config
 make world -j$(nproc) V=sc
 ```
 
