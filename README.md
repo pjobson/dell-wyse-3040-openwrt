@@ -48,6 +48,7 @@ This is mainly about building and installing OpenWRT on the Wyse 3040. I have in
     * [Video Power Mod, Teardown, UEFI/BIOS Quirks](https://www.youtube.com/watch?v=6Ls7xn4qdlk).
 * **CPU:** [Intel(R) Atom(TM) x5-Z8350 CPU @ 1.44GHz](https://ark.intel.com/content/www/us/en/ark/products/93361/intel-atom-x5z8350-processor-2m-cache-up-to-1-92-ghz.html)
 * **Memory:** 2GB DDR3 1600 MHz Soldered
+* **Drive:** 8GB EMMC SK Hynix H56C4HP4A - There is also a 16GB version of this board.
 * **Audio:** PulseAudio shows:
     * Intel HDMI/DP LPE Audio - snd_hdmi_lpe_audio
     * Dell Inc. - Wyse 3040 ThinClient -- CherryTrailCR - snd_soc_sst_cht_bsw_rt5672
@@ -242,6 +243,10 @@ This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-b
 **CPU**
 
 ![CPU](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/cpu.jpg)
+
+**EMMC**
+
+![EMMC](https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/img/emmc-skhynix-805a.jpg)
 
 **SDIO**
 
