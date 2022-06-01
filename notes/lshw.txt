@@ -1,0 +1,334 @@
+description: Desktop Computer
+product: Wyse 3040 Thin Client (07C1)
+vendor: Dell Inc.
+serial: HLB1DL2
+width: 64 bits
+capabilities: smbios-3.0.0 dmi-3.0.0 smp vsyscall32
+configuration: boot=normal chassis=desktop family=Wyse sku=07C1 uuid=44454C4C-4C00-1042-8031-C8C04F444C32
+*-core
+     description: Motherboard
+     product: Cherry Trail CR
+     vendor: Dell Inc.
+     physical id: 0
+     version: A00
+     serial: /HLB1DL2/CNWSC0086600E3/
+   *-firmware
+        description: BIOS
+        vendor: Dell Inc.
+        physical id: 0
+        version: 1.2.4
+        date: 01/18/2018
+        size: 64KiB
+        capacity: 16MiB
+        capabilities: pci pnp upgrade shadowing cdboot bootselect edd int13floppy1200 int13floppy720 int13floppy2880 int5printscreen int9keyboard int14serial int17printer acpi usb biosbootspecification netboot uefi
+   *-memory
+        description: System Memory
+        physical id: b
+        slot: System board or motherboard
+        size: 2GiB
+        capacity: 2GiB
+        capabilities: ecc
+        configuration: errordetection=multi-bit-ecc
+      *-bank
+           description: Row of chips DDR3 1600 MHz (0.6 ns)
+           physical id: 0
+           slot: Motherboard
+           size: 2GiB
+           width: 8 bits
+           clock: 1600MHz (0.6ns)
+   *-cache:0
+        description: L1 cache
+        physical id: 12
+        slot: CPU Internal L1
+        size: 224KiB
+        capacity: 224KiB
+        capabilities: internal write-back
+        configuration: level=1
+   *-cache:1
+        description: L2 cache
+        physical id: 13
+        slot: CPU Internal L2
+        size: 2MiB
+        capacity: 2MiB
+        capabilities: internal write-back unified
+        configuration: level=2
+   *-cpu
+        description: CPU
+        product: Intel(R) Atom(TM) x5-Z8350  CPU @ 1.44GHz
+        vendor: Intel Corp.
+        physical id: 14
+        bus info: cpu@0
+        version: Intel(R) Atom(TM) x5-Z8350 CPU @ 1.44GHz
+        slot: SOCKET 0
+        size: 479MHz
+        capacity: 1920MHz
+        width: 64 bits
+        clock: 80MHz
+        capabilities: lm fpu fpu_exception wp vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush dts acpi mmx fxsr sse sse2 ss ht tm pbe syscall nx rdtscp x86-64 constant_tsc arch_perfmon pebs bts rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid aperfmperf tsc_known_freq pni pclmulqdq dtes64 monitor ds_cpl vmx est tm2 ssse3 cx16 xtpr pdcm sse4_1 sse4_2 movbe popcnt tsc_deadline_timer aes rdrand lahf_lm 3dnowprefetch epb pti ibrs ibpb stibp tpr_shadow vnmi flexpriority ept vpid tsc_adjust smep erms dtherm ida arat md_clear cpufreq
+        configuration: cores=4 enabledcores=4 threads=4
+   *-pci
+        description: Host bridge
+        product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series SoC Transaction Register
+        vendor: Intel Corporation
+        physical id: 100
+        bus info: pci@0000:00:00.0
+        version: 36
+        width: 32 bits
+        clock: 33MHz
+        configuration: driver=iosf_mbi_pci
+        resources: irq:0
+      *-display
+           description: VGA compatible controller
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controller
+           vendor: Intel Corporation
+           physical id: 2
+           bus info: pci@0000:00:02.0
+           version: 36
+           width: 64 bits
+           clock: 33MHz
+           capabilities: pm msi vga_controller bus_master cap_list rom
+           configuration: driver=i915 latency=0
+           resources: irq:127 memory:90000000-90ffffff memory:80000000-8fffffff ioport:f000(size=64) memory:c0000-dffff
+      *-generic:0
+           description: Signal processing controller
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series Power Management Controller
+           vendor: Intel Corporation
+           physical id: b
+           bus info: pci@0000:00:0b.0
+           version: 36
+           width: 64 bits
+           clock: 33MHz
+           capabilities: msi pm cap_list
+           configuration: driver=proc_thermal latency=0
+           resources: irq:131 memory:9152c000-9152cfff
+      *-generic:1
+           description: SD Host controller
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series SDIO Controller
+           vendor: Intel Corporation
+           physical id: 11
+           bus info: pci@0000:00:11.0
+           version: 36
+           width: 32 bits
+           clock: 33MHz
+           capabilities: pm bus_master cap_list
+           configuration: driver=sdhci-pci latency=0
+           resources: irq:17 memory:91529000-91529fff
+      *-usb
+           description: USB controller
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series USB xHCI Controller
+           vendor: Intel Corporation
+           physical id: 14
+           bus info: pci@0000:00:14.0
+           version: 36
+           width: 64 bits
+           clock: 33MHz
+           capabilities: pm msi xhci bus_master cap_list
+           configuration: driver=xhci_hcd latency=0
+           resources: irq:118 memory:91500000-9150ffff
+         *-usbhost:0
+              product: xHCI Host Controller
+              vendor: Linux 5.4.0-91-generic xhci-hcd
+              physical id: 0
+              bus info: usb@1
+              logical name: usb1
+              version: 5.04
+              capabilities: usb-2.00
+              configuration: driver=hub slots=7 speed=480Mbit/s
+            *-usb:0
+                 description: Mass storage device
+                 product: Ultra Fit
+                 vendor: SanDisk
+                 physical id: 2
+                 bus info: usb@1:2
+                 version: 1.00
+                 serial: 0501acccc17e8275cd04397d557a4138ff8d034e928967f41b366a69c897b9235a6b000000000000
+                 capabilities: usb-2.10 scsi
+                 configuration: driver=usb-storage maxpower=224mA speed=480Mbit/s
+            *-usb:1
+                 description: Keyboard
+                 product: Goldtouch USB Keyboard
+                 vendor: Lite-On
+                 physical id: 3
+                 bus info: usb@1:3
+                 version: 1.32
+                 capabilities: usb-1.10
+                 configuration: driver=usbhid maxpower=100mA speed=2Mbit/s
+            *-usb:2
+                 description: Mouse
+                 product: USB Optical Mouse
+                 vendor: Sunplus Innovation Technology Inc.
+                 physical id: 4
+                 bus info: usb@1:4
+                 version: 0.14
+                 capabilities: usb-2.00
+                 configuration: driver=usbhid maxpower=98mA speed=2Mbit/s
+         *-usbhost:1
+              product: xHCI Host Controller
+              vendor: Linux 5.4.0-91-generic xhci-hcd
+              physical id: 1
+              bus info: usb@2
+              logical name: usb2
+              version: 5.04
+              capabilities: usb-3.00
+              configuration: driver=hub slots=6 speed=5000Mbit/s
+            *-usb
+                 description: Mass storage device
+                 product: Ultra
+                 vendor: SanDisk
+                 physical id: 1
+                 bus info: usb@2:1
+                 version: 1.00
+                 serial: 4C530001050620121164
+                 capabilities: usb-3.00 scsi
+                 configuration: driver=usb-storage maxpower=896mA speed=5000Mbit/s
+      *-generic:2
+           description: Encryption controller
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series Trusted Execution Engine
+           vendor: Intel Corporation
+           physical id: 1a
+           bus info: pci@0000:00:1a.0
+           version: 36
+           width: 32 bits
+           clock: 33MHz
+           capabilities: pm msi bus_master cap_list
+           configuration: driver=mei_txe latency=0
+           resources: irq:130 memory:91300000-913fffff memory:91200000-912fffff
+      *-pci
+           description: PCI bridge
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series PCI Express Port #1
+           vendor: Intel Corporation
+           physical id: 1c
+           bus info: pci@0000:00:1c.0
+           version: 36
+           width: 32 bits
+           clock: 33MHz
+           capabilities: pci pciexpress msi pm normal_decode bus_master cap_list
+           configuration: driver=pcieport
+           resources: irq:117 ioport:e000(size=4096) memory:91400000-914fffff
+         *-network
+              description: Ethernet interface
+              product: RTL8111/8168/8411 PCI Express Gigabit Ethernet Controller
+              vendor: Realtek Semiconductor Co., Ltd.
+              physical id: 0
+              bus info: pci@0000:01:00.0
+              logical name: enp1s0
+              version: 15
+              serial: 54:48:10:b5:9f:44
+              size: 1Gbit/s
+              capacity: 1Gbit/s
+              width: 64 bits
+              clock: 33MHz
+              capabilities: pm msi pciexpress msix bus_master cap_list ethernet physical tp mii 10bt 10bt-fd 100bt 100bt-fd 1000bt-fd autonegotiation
+              configuration: autonegotiation=on broadcast=yes driver=r8169 duplex=full firmware=rtl8168h-2_0.0.2 02/26/15 ip=10.10.10.226 latency=0 link=yes multicast=yes port=MII speed=1Gbit/s
+              resources: irq:16 ioport:e000(size=256) memory:91404000-91404fff memory:91400000-91403fff
+      *-isa
+           description: ISA bridge
+           product: Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Series PCU
+           vendor: Intel Corporation
+           physical id: 1f
+           bus info: pci@0000:00:1f.0
+           version: 36
+           width: 32 bits
+           clock: 33MHz
+           capabilities: isa bus_master cap_list
+           configuration: driver=lpc_ich latency=0
+           resources: irq:0
+   *-pnp00:00
+        product: PnP device PNP0c02
+        physical id: 1
+        capabilities: pnp
+        configuration: driver=system
+   *-pnp00:01
+        product: PnP device PNP0501
+        physical id: 2
+        capabilities: pnp
+        configuration: driver=serial
+   *-pnp00:02
+        product: PnP device PNP0c02
+        physical id: 3
+        capabilities: pnp
+        configuration: driver=system
+   *-pnp00:03
+        product: PnP device PNP0c02
+        physical id: 4
+        capabilities: pnp
+        configuration: driver=system
+   *-pnp00:04
+        product: PnP device PNP0b00
+        physical id: 5
+        capabilities: pnp
+        configuration: driver=rtc_cmos
+   *-scsi:0
+        physical id: 6
+        logical name: scsi0
+        capabilities: emulated scsi-host
+        configuration: driver=usb-storage
+      *-disk
+           description: SCSI Disk
+           product: Ultra Fit
+           vendor: SanDisk
+           physical id: 0.0.0
+           bus info: scsi@0:0.0.0
+           logical name: /dev/sda
+           version: 1.00
+           serial: 0501acccc17e8275cd04
+           size: 114GiB (123GB)
+           capabilities: removable
+           configuration: ansiversion=6 logicalsectorsize=512 sectorsize=512
+         *-medium
+              physical id: 0
+              logical name: /dev/sda
+              size: 114GiB (123GB)
+              capabilities: partitioned partitioned:dos
+              configuration: signature=2d7faf9b
+            *-volume:0
+                 description: Windows FAT volume
+                 vendor: mkfs.fat
+                 physical id: 2
+                 logical name: /dev/sda2
+                 version: FAT12
+                 serial: 54c5-9c6c
+                 size: 15EiB
+                 capabilities: primary boot fat initialized
+                 configuration: FATs=2 filesystem=fat
+            *-volume:1
+                 description: Linux filesystem partition
+                 physical id: 3
+                 logical name: /dev/sda3
+                 capacity: 112GiB
+                 capabilities: primary
+   *-scsi:1
+        physical id: 7
+        logical name: scsi1
+        capabilities: emulated scsi-host
+        configuration: driver=usb-storage
+      *-disk
+           description: SCSI Disk
+           product: Ultra
+           vendor: SanDisk
+           physical id: 0.0.0
+           bus info: scsi@1:0.0.0
+           logical name: /dev/sdb
+           version: 1.00
+           serial: 4C530001050620121164
+           size: 14GiB (15GB)
+           capabilities: removable
+           configuration: ansiversion=6 logicalsectorsize=512 sectorsize=512
+         *-medium
+              physical id: 0
+              logical name: /dev/sdb
+              size: 14GiB (15GB)
+              capabilities: partitioned partitioned:dos
+              configuration: signature=21c88142
+            *-volume
+                 description: EXT4 volume
+                 vendor: Linux
+                 physical id: 1
+                 logical name: /dev/sdb1
+                 logical name: /media/mint/b4b9ebe4-1936-465f-802b-5e463ee8211f
+                 version: 1.0
+                 serial: b4b9ebe4-1936-465f-802b-5e463ee8211f
+                 size: 14GiB
+                 capacity: 14GiB
+                 capabilities: primary journaled extended_attributes large_files huge_files dir_nlink recover 64bit extents ext4 ext2 initialized
+                 configuration: created=2022-05-20 07:34:45 filesystem=ext4 lastmountpoint=/dvr/media/OS/temp modified=2022-05-25 21:14:14 mount.fstype=ext4 mount.options=rw,nosuid,nodev,relatime mounted=2022-05-25 21:14:14 state=mounted
