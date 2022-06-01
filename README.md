@@ -1,6 +1,31 @@
 # Dell Wyze 3040
 
-This is mainly about installing OpenWRT on the Wyse 3040, but I wanted to include as much information as possible.
+This is mainly about building and installing OpenWRT on the Wyse 3040. I have included as much additional information as possible.
+
+## TOC
+
+- [Dell Wyze 3040](#dell-wyze-3040)
+  * [Notes](#notes)
+    + [Dell Pages](#dell-pages)
+    + [Articles](#articles)
+  * [Hardware](#hardware)
+  * [Boot Options](#boot-options)
+  * [BIOS Updates](#bios-updates)
+  * [BIOS Setup](#bios-setup)
+  * [Operating Systems](#operating-systems)
+    + [Linux](#linux)
+      - [OpenWRT](#openwrt)
+        * [Building](#building)
+        * [My Unofficial Builds](#my-unofficial-builds)
+      - [ThinLinux](#thinlinux)
+      - [Mint](#mint)
+      - [antiX Linux](#antix-linux)
+      - [VyOS](#vyos)
+  * [Images](#images)
+    + [Device](#device)
+    + [OpenWRT](#openwrt-1)
+    + [antiX](#antix)
+
 
 ## Notes
 
@@ -19,6 +44,8 @@ This is mainly about installing OpenWRT on the Wyse 3040, but I wanted to includ
 
 ## Hardware
 
+* **Power:** My device shows 5V @ 3A, I use [this power adapter](https://www.amazon.com/dp/B0877ZTXT2?ref=ppx_yo2ov_dt_b_product_details).
+    * [Video Power Mod, Teardown, UEFI/BIOS Quirks](https://www.youtube.com/watch?v=6Ls7xn4qdlk).
 * **CPU:** [Intel(R) Atom(TM) x5-Z8350 CPU @ 1.44GHz](https://ark.intel.com/content/www/us/en/ark/products/93361/intel-atom-x5z8350-processor-2m-cache-up-to-1-92-ghz.html)
 * **Memory:** 2GB DDR3 1600 MHz Soldered
 * **Audio:** PulseAudio shows:
@@ -54,7 +81,7 @@ This is mainly about installing OpenWRT on the Wyse 3040, but I wanted to includ
 
 My unit would not let me update to 1.2.5 from 1.2.4, no clue why. It just showed `<invalid>` in the updater.
 
-* Download from Dell: https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers
+* Download from Dell: [https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers](https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers)
 * Unzip it if it is zipped.
 * Copy to a USB flash drive, FAT32 formatted.
 * Boot the with F12 key.
@@ -104,7 +131,6 @@ git checkout v22.03.0-rc3
 ./scripts/feeds install -a
 
 # Download my config
-
 wget "https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/config/config?token=GHSAT0AAAAAABTRQNXRKMMNAU3TGNBJGEREYUW7HAA" -O .config
 
 # Otherwise make your own
@@ -188,13 +214,29 @@ Dell has their own linux distributino for the Wyze 3040 called ThinLinux.  You c
 
 #### Mint
 
-Linux mint will boot and I have used the Live USB stick to mess around with the device.  The minimum system requirements for Mint are 2GB of RAM and 20GB of disk space.  The installer will crash shortly after selecting keyboard type.
+[Linux Mint](https://linuxmint.com/) will boot off the USB stick and I have used the Live USB stick to mess around with the device.  The minimum system requirements for Mint are 2GB of RAM and 20GB of disk space.  The installer will crash shortly after selecting keyboard type.
 
 #### antiX Linux
 
-antiX is probably a better option as the minimum system requirements are 256MB RAM and 5GB HDD.  I have not experimented with it, yet.
+[antiX](https://antixlinux.com/) is probably a better option as the minimum system requirements are 256MB RAM and 5GB HDD.  This seems to install and run fine, you will need to write the ISO to a USB with [live-usb-maker](https://github.com/MX-Linux/lum-qt-appimage/releases) as the default antiX distribution ISO is legacy boot only.
 
 #### VyOS
 
-This person has done some work with VyOS [https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
+This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
 
+## Images
+
+### Device
+
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/front.jpg)
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/rear.jpg)
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/angle.jpg)
+
+### OpenWRT
+
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/neofetch.png)
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/luci_status.png)
+
+### antiX
+
+![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/antix-wyse-3040.png)
