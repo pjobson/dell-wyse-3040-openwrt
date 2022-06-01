@@ -1,0 +1,81 @@
+2 card(s) available.
+	index: 0
+	name: <alsa_card.pci-0000_00_02.0-platform-hdmi-lpe-audio>
+	driver: <module-alsa-card.c>
+	owner module: 23
+	properties:
+		alsa.card = "0"
+		alsa.card_name = "Intel HDMI/DP LPE Audio"
+		alsa.long_card_name = "Intel HDMI/DP LPE Audio"
+		alsa.driver_name = "snd_hdmi_lpe_audio"
+		device.bus_path = "pci-0000:00:02.0-platform-hdmi-lpe-audio"
+		sysfs.path = "/devices/pci0000:00/0000:00:02.0/hdmi-lpe-audio/sound/card0"
+		device.bus = "pci"
+		device.vendor.id = "8086"
+		device.vendor.name = "Intel Corporation"
+		device.product.id = "22b0"
+		device.product.name = "Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controller"
+		device.string = "0"
+		device.description = "Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx Integrated Graphics Controller"
+		module-udev-detect.discovered = "1"
+		device.icon_name = "audio-card-pci"
+	profiles:
+		output:hdmi-stereo: Digital Stereo (HDMI) Output (priority 5900, available: no)
+		output:hdmi-surround: Digital Surround 5.1 (HDMI) Output (priority 800, available: no)
+		output:hdmi-surround71: Digital Surround 7.1 (HDMI) Output (priority 800, available: no)
+		output:hdmi-stereo-extra1: Digital Stereo (HDMI 2) Output (priority 5700, available: no)
+		output:hdmi-surround-extra1: Digital Surround 5.1 (HDMI 2) Output (priority 600, available: no)
+		output:hdmi-surround71-extra1: Digital Surround 7.1 (HDMI 2) Output (priority 600, available: no)
+		output:hdmi-stereo-extra2: Digital Stereo (HDMI 3) Output (priority 5700, available: no)
+		output:hdmi-surround-extra2: Digital Surround 5.1 (HDMI 3) Output (priority 600, available: no)
+		output:hdmi-surround71-extra2: Digital Surround 7.1 (HDMI 3) Output (priority 600, available: no)
+		off: Off (priority 0, available: unknown)
+	active profile: <off>
+	ports:
+		hdmi-output-0: HDMI / DisplayPort (priority 5900, latency offset 0 usec, available: no)
+			properties:
+				device.icon_name = "video-display"
+		hdmi-output-1: HDMI / DisplayPort 2 (priority 5800, latency offset 0 usec, available: no)
+			properties:
+				device.icon_name = "video-display"
+		hdmi-output-2: HDMI / DisplayPort 3 (priority 5700, latency offset 0 usec, available: no)
+			properties:
+				device.icon_name = "video-display"
+	index: 1
+	name: <alsa_card.platform-cht-bsw-rt5672>
+	driver: <module-alsa-card.c>
+	owner module: 24
+	properties:
+		alsa.card = "1"
+		alsa.card_name = "cht-bsw-rt5672"
+		alsa.long_card_name = "DellInc.-Wyse3040ThinClient--CherryTrailCR"
+		alsa.driver_name = "snd_soc_sst_cht_bsw_rt5672"
+		device.bus_path = "platform-cht-bsw-rt5672"
+		sysfs.path = "/devices/pci0000:00/808622A8:00/cht-bsw-rt5672/sound/card1"
+		device.form_factor = "internal"
+		device.string = "1"
+		device.description = "Built-in Audio"
+		module-udev-detect.discovered = "1"
+		device.icon_name = "audio-card"
+	profiles:
+		HiFi: Play HiFi quality Music (priority 40768, available: unknown)
+		off: Off (priority 0, available: unknown)
+	active profile: <HiFi>
+	sinks:
+		alsa_output.platform-cht-bsw-rt5672.HiFi__hw_chtbswrt5672__sink/#1: Built-in Audio Headphones + Mono Speaker + Stereo Speakers
+	sources:
+		alsa_output.platform-cht-bsw-rt5672.HiFi__hw_chtbswrt5672__sink.monitor/#1: Monitor of Built-in Audio Headphones + Mono Speaker + Stereo Speakers
+		alsa_input.platform-cht-bsw-rt5672.HiFi__hw_chtbswrt5672__source/#2: Built-in Audio Headset Microphone + Internal Digital Microphone on DMIC2 + Internal Digital Microphone on DMIC1
+	ports:
+		[Out] Headphones: Headphones (priority 300, latency offset 0 usec, available: no)
+			properties:
+		[Out] Speaker2: Mono Speaker (priority 100, latency offset 0 usec, available: unknown)
+			properties:
+		[Out] Speaker1: Stereo Speakers (priority 200, latency offset 0 usec, available: unknown)
+			properties:
+		[In] Headset: Headset Microphone (priority 300, latency offset 0 usec, available: no)
+			properties:
+		[In] Mic2: Internal Digital Microphone on DMIC2 (priority 200, latency offset 0 usec, available: unknown)
+			properties:
+		[In] Mic1: Internal Digital Microphone on DMIC1 (priority 100, latency offset 0 usec, available: unknown)
+			properties:
