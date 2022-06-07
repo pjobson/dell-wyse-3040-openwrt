@@ -181,7 +181,7 @@ sudo gdisk /dev/mmcblk0
 sudo fdisk -l 
 ```
 
-From here, I used gparted to resize the system partitions, because I couldn't seem to get it to go properly in gdisk, I probably just don't know how to use gdisk properly.
+From here, I used gparted to resize the system partitions, because I couldn't seem to get it to go properly in gdisk, I probably just don't know how to use gdisk properly. DO NOT resize it to the full 8GB or it will not boot, keep slightly under 8GB.  I have no clue why.
 
 
 ##### My Unofficial Builds
