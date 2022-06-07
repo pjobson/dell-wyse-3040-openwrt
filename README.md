@@ -132,7 +132,7 @@ git checkout v22.03.0-rc3
 ./scripts/feeds install -a
 
 # Download my config
-wget "https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/config/config?token=GHSAT0AAAAAABTRQNXRKMMNAU3TGNBJGEREYUW7HAA" -O .config
+wget "https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/config/config" -O .config
 
 # Otherwise make your own
 # Make your config
