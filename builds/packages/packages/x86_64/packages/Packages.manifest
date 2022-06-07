@@ -1,0 +1,293 @@
+Package: adblock
+Version: 4.1.3-9
+Depends: libc, jshn, jsonfilter, coreutils, coreutils-sort, ca-bundle, opkg
+Source: feeds/packages/net/adblock
+SourceName: adblock
+License: GPL-3.0-or-later
+Section: net
+SourceDateEpoch: 1652194493
+Maintainer: Dirk Brenken <dev@brenken.org>
+Architecture: all
+Installed-Size: 20065
+Filename: adblock_4.1.3-9_all.ipk
+Size: 21064
+SHA256sum: f75ce5625a9a7a64843157db0bf233550e545e71502a11588cb0dbe1d302b185
+Description:  Powerful adblock script to block ad/abuse domains via dnsmasq, unbound, named or kresd.
+ The script supports many domain blacklist sites plus manual black- and whitelist overrides.
+ Please see https://github.com/openwrt/packages/blob/master/net/adblock/files/README.md for further information.
+ 
+
+Package: alsa-lib
+Version: 1.2.6.1-1
+Depends: libc, kmod-sound-core, libpthread, librt
+Source: feeds/packages/libs/alsa-lib
+SourceName: alsa-lib
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1639992511
+Maintainer: Ted Hess <thess@kitschensync.net>, Peter Wagner <tripolar@gmx.at>
+Architecture: x86_64
+Installed-Size: 406076
+Filename: alsa-lib_1.2.6.1-1_x86_64.ipk
+Size: 405663
+SHA256sum: 82d1f323daa07ae9e355523cba50a1368a238b85642aa77fc86f9b5b4dec8f81
+Description:  This is the library package for alsa, needed by some userspace programs.
+ You must have enabled the ALSA support in the kernel.
+
+Package: alsa-ucm-conf
+Version: 1.2.6.2-1
+Depends: libc
+Source: feeds/packages/libs/alsa-ucm-conf
+SourceName: alsa-ucm-conf
+License: BSD-3-Clause
+LicenseFiles: LICENSE
+Section: libs
+SourceDateEpoch: 1639992511
+Architecture: all
+Installed-Size: 38987
+Filename: alsa-ucm-conf_1.2.6.2-1_all.ipk
+Size: 39515
+SHA256sum: 09a8e8519b8a6b8eb22f85b75db113ac352041b2fa01a33d5d833ff51e5e8b62
+Description:  This is a set of configuration files needed for some ALS utilities like alsactl.
+
+Package: alsa-utils
+Version: 1.2.6-1
+Depends: libc, alsa-lib, alsa-ucm-conf, libncursesw6, libpthread
+Source: feeds/packages/sound/alsa-utils
+SourceName: alsa-utils
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: sound
+SourceDateEpoch: 1639992511
+Maintainer: Ted Hess <thess@kitschensync.net>
+Architecture: x86_64
+Installed-Size: 138384
+Filename: alsa-utils_1.2.6-1_x86_64.ipk
+Size: 139117
+SHA256sum: 911c3945f63f1795658b9cf931b4eac4b542373b1b186b563a998c6a1a6ad2e6
+Description:  ALSA (Advanced Linux Sound Architecture) utilities
+
+Package: cgi-io
+Version: 2021-09-08-98cef9dd-20
+Depends: libc, libubox20211120, libubus20220228
+Source: feeds/packages/net/cgi-io
+SourceName: cgi-io
+License: GPL-2.0-or-later
+Section: net
+SourceDateEpoch: 1631130933
+Maintainer: John Crispin <blogic@openwrt.org>
+Architecture: x86_64
+Installed-Size: 8927
+Filename: cgi-io_2021-09-08-98cef9dd-20_x86_64.ipk
+Size: 9723
+SHA256sum: 2373e36e99bb0f523462cb4bfbf26205a67e9a2f3041f82bc0433246239b3bdf
+Description:  This package contains an cgi utility that is useful for up/downloading files
+
+Package: coreutils-sort
+Version: 9.0-2
+Depends: libc, coreutils, libpthread
+Alternatives: 300:/usr/bin/sort:/usr/libexec/sort-coreutils
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils-sort
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1645913484
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 53683
+Filename: coreutils-sort_9.0-2_x86_64.ipk
+Size: 54599
+SHA256sum: 943129f82026e1796202fc36d59a9fd2953722e07d1683cc73bedc4b16e016c1
+Description:  Full version of standard GNU sort utility.
+
+Package: coreutils
+Version: 9.0-2
+Depends: libc
+Source: feeds/packages/utils/coreutils
+SourceName: coreutils
+License: GPL-3.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1645913484
+CPE-ID: cpe:/a:gnu:coreutils
+Maintainer: Jo-Philipp Wich <jo@mein.io>
+Architecture: x86_64
+Installed-Size: 106
+Filename: coreutils_9.0-2_x86_64.ipk
+Size: 992
+SHA256sum: b6481a3dd24a6c1ad4ee04761cd6ab7fb8c2da2dba26b61015750ab5682530f2
+Description:  Full versions of standard GNU utilities. If an equivalent Busybox applet is
+ available, you should consider compiling that instead as Busybox applets are
+ usually smaller, at the expense of reduced functionality.
+
+Package: htop
+Version: 3.2.0-1
+Depends: libc, libncurses6
+Source: feeds/packages/admin/htop
+SourceName: htop
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: admin
+SourceDateEpoch: 1652128459
+CPE-ID: cpe:/a:htop:htop
+Maintainer: Etienne CHAMPETIER <champetier.etienne@gmail.com>
+Architecture: x86_64
+Installed-Size: 104094
+Filename: htop_3.2.0-1_x86_64.ipk
+Size: 105092
+SHA256sum: d2c26422bcd13487db272cd1b6f59fb9ae91ecf7b94f7eab91a762c95eda6a59
+Description:  Htop is an ncursed-based process viewer similar to top, but
+ it allows to scroll the list vertically and horizontally to
+ see all processes and their full command lines.
+
+Package: hwinfo
+Version: 21.71-4
+Depends: libc, libuuid1
+Source: feeds/packages/utils/hwinfo
+SourceName: hwinfo
+License: GPL-2.0-or-later
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1642482669
+Maintainer: Alberto Bursi <bobafetthotmail@gmail.com>
+Architecture: x86_64
+Installed-Size: 1035957
+Filename: hwinfo_21.71-4_x86_64.ipk
+Size: 991784
+SHA256sum: f0c6bac172cb53dfe3795ebc0cdcdd665f83b28a4cc5e16fbfd8863e2a85ebe9
+Description:  hwinfo/libhd are used to probe for the hardware present in the system.
+ It can be used to generate a system overview log which can be later 
+ used for support.
+ This project provides a hardware probing library libhd.so and a 
+ command line tool hwinfo using it. A major project using this library
+ is YaST, the SUSE installation tool.
+
+Package: libevdev
+Version: 1.12.0-1
+Depends: libc
+Source: feeds/packages/libs/libevdev
+SourceName: libevdev
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1636942601
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Architecture: x86_64
+Installed-Size: 31404
+Filename: libevdev_1.12.0-1_x86_64.ipk
+Size: 31965
+SHA256sum: 6f44286c699d7e5d55579ab967d18ca3acfab7ce804478069ea1a3ce203f3341
+Description:  libevdev is a wrapper library for evdev devices. it moves the common
+ tasks when dealing with evdev devices into a library and provides a
+ library interface to the callers, thus avoiding erroneous ioctls, etc.
+ 
+ The eventual goal is that libevdev wraps all ioctls available to
+ evdev devices, thus making direct access unnecessary.
+
+Package: libkmod
+Version: 27-2
+Depends: libc, zlib
+Source: feeds/packages/utils/kmod
+SourceName: libkmod
+License: LGPL-2.1-or-later
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1607593828
+Maintainer: Jeff Waugh <jdub@bethesignal.org>
+Architecture: x86_64
+Installed-Size: 35373
+Filename: libkmod_27-2_x86_64.ipk
+Size: 36245
+SHA256sum: 7a4910ac0cdca3fad668a715c32623411b4e371cc5f72b4fb10c173fc034e9ff
+Description:  Linux kernel module handling (library)
+
+Package: libpci
+Version: 3.7.0-2
+Depends: libc
+Source: feeds/packages/utils/pciutils
+SourceName: libpci
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1609305848
+Maintainer: Lucian Cristian <lucian.cristian@gmail.com>
+Architecture: x86_64
+Installed-Size: 19444
+Filename: libpci_3.7.0-2_x86_64.ipk
+Size: 20211
+SHA256sum: 18998432973bbf3b487dc30f4f54d537cf310ce09cccbf432ea86655585551e0
+Description:  Linux PCI Libraries
+
+Package: libudev-zero
+Version: 1.0.1-1
+Depends: libc, libevdev
+Conflicts: libudev, eudev, udev
+Provides: libudev
+Source: feeds/packages/libs/libudev-zero
+SourceName: libudev-zero
+License: MIT
+LicenseFiles: COPYING
+Section: libs
+SourceDateEpoch: 1648163185
+Maintainer: Daniel Golle <daniel@makrotopia.org>
+Architecture: x86_64
+Installed-Size: 9722
+Filename: libudev-zero_1.0.1-1_x86_64.ipk
+Size: 10500
+SHA256sum: fd34c343fdc0db68d83a5f602c4dca111398d043d00ef82fb405d3da7d5e8b8b
+Description:  Drop-in replacement for libudev
+
+Package: pciids
+Version: 0.359-1
+Depends: libc
+Source: feeds/packages/utils/hwdata
+SourceName: pciids
+License: GPL-2.0-or-later  XFree86-1.0
+LicenseFiles: LICENSE
+Section: utils
+SourceDateEpoch: 1651680714
+Architecture: x86_64
+Installed-Size: 306371
+Filename: pciids_0.359-1_x86_64.ipk
+Size: 306641
+SHA256sum: 31f2ea9133470619704e689f5c046aa794479b8bc8ad23b50b373389a50aa879
+Description:  PCI ID list
+
+Package: pciutils
+Version: 3.7.0-2
+Depends: libc, libkmod, libpci, pciids
+Source: feeds/packages/utils/pciutils
+SourceName: pciutils
+License: GPL-2.0
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1609305848
+Maintainer: Lucian Cristian <lucian.cristian@gmail.com>
+Architecture: x86_64
+Installed-Size: 43620
+Filename: pciutils_3.7.0-2_x86_64.ipk
+Size: 44494
+SHA256sum: 22abb4fd156b7d62fbb0a70c487c866b8a06257c7d019db24fefac37f28ed3bf
+Description:  contains collection of programs for inspecting and manipulating configuration
+ of PCI devices
+
+Package: usbutils
+Version: 014-1
+Depends: libc, libusb-1.0-0, libudev, librt, libpthread
+Source: feeds/packages/utils/usbutils
+SourceName: usbutils
+License: GPL-2.0-only
+LicenseFiles: COPYING
+Section: utils
+SourceDateEpoch: 1629873092
+Maintainer: Felix Fietkau <nbd@nbd.name>
+Architecture: x86_64
+Installed-Size: 54658
+Filename: usbutils_014-1_x86_64.ipk
+Size: 55373
+SHA256sum: 10a3f4cd5a2615fd0b13cf9c32413862a2701998a5d363ef575de4e426df111a
+Description:  USB devices listing utilities
+
