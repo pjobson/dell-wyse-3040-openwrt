@@ -138,7 +138,7 @@ wget "https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/conf
 # Make your config
 make menuconfig
 # Make your kernel config
-make kernel_menuconfig
+make kernel_menuconfig -j$(nproc)
 
 # Do the build, it'll take like an hour.
 make world -j$(nproc) V=sc
