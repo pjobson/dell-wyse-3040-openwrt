@@ -141,7 +141,7 @@ make menuconfig
 make kernel_menuconfig -j$(nproc)
 
 # Do the build, it'll take like an hour.
-make world -j$(nproc) V=sc
+make defconfig download clean world -j $(nproc) V=sc
 
 # You can find the builds in: openwrt/bin/
 # This includes all the packages.
