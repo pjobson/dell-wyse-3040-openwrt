@@ -125,76 +125,55 @@ cd openwrt
 # list tags
 git tag
 # I'm using the latest rc as of today
-git checkout v22.03.0-rc3
+git checkout tags/v22.03.2
 
 # Update/install the feeds
 ./scripts/feeds update -a
 ./scripts/feeds install -a
 
-# Download my config
-wget "https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/config/config" -O .config
+# Optional: Download my config
+# wget "https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/config/config" -O .config
 
 # Otherwise make your own
 # Make your config
-make menuconfig
+make menuconfig -j$(nproc)
+
+# Select options:
+#   Target System -> x86
+#   Subtarget -> x86_64
+#   Target Profile -> Generic x86/64
+#   Target Images -> (uncheck) Use Console Terminal (in addition to Serial)
+#   Target Images -> (clear out) Serial port device
+#   Target Images -> (uncheck) GZip images
+#   LuCI -> Collections -> luci
+#   Select whatever else you want/don't want
+# Save/Exit
+
 # Make your kernel config
 make kernel_menuconfig -j$(nproc)
+
+# Select Options:
+#   Processor type and features -> Processor family -> Intel Atom
+# Save/Exit
 
 # Do the build, it'll take like an hour.
 make defconfig download clean world -j $(nproc) V=sc
 
 # You can find the builds in: openwrt/bin/
 # This includes all the packages.
-find . -name "openwrt-x86-64-generic-ext4-combined-efi.img.gz"
+find . -name "openwrt-x86-64-generic-ext4-combined-efi.img"
 ```
-
-Gunzip and copy the `openwrt-x86-64-generic-ext4-combined-efi.img.gz` and copy `openwrt-x86-64-generic-ext4-combined-efi.img` file to a USB stick, boot the device off a secondary drive with linux on it, as described below.
-
-Open a terminal from your LiveUSB stick.
-
-```
-# Find your EMMC drive, mine is: /dev/mmcblk0
-sudo fdisk -l
-
-# Find the image
-find /media/mint -name openwrt-x86-64-generic-ext4-combined-efi.img
-
-# Write the image.
-sudo dd if=./openwrt-x86-64-generic-ext4-combined-efi.img of=/dev/mmcblk0 bs=512 status=progress
-
-# Use fdisk to show your partitions
-sudo fdisk -l
-
-# It'll probably show some partition errors, we will fix those now.
-# For some reason the img file has the partitions in a weird order.
-sudo gdisk /dev/mmcblk0
-        s - sort partitions
-        w - write table and exit
-        Y - Do you want to correct this problem?
-        Y - Do you want to proceed?
-
-# Should return
-# OK; writing new GUID partition table (GPT) to /dev/mmcblk0.
-# The operation has completed successfully.
-
-# fdisk should no longer show errors.
-sudo fdisk -l 
-```
-
-From here, I used gparted to resize the system partitions, because I couldn't seem to get it to go properly in gdisk, I probably just don't know how to use gdisk properly. DO NOT resize it to the full 8GB or it will not boot, keep slightly under 8GB.  I have no clue why.
-
 
 ##### My Unofficial Builds
 
-* [openwrt.atom.build.20220531.img.gz](https://github.com/pjobson/openwrt-dell-wyze-3040/raw/main/builds/openwrt.atom.build.20220531.img.gz)
-* [openwrt.atom.build.20220528.img.gz](https://github.com/pjobson/openwrt-dell-wyze-3040/raw/main/builds/openwrt.atom.build.20220528.img.gz)
+* [openwrt.atom.v22.03.2.img.gz](https://github.com/pjobson/openwrt-dell-wyze-3040/raw/main/builds/openwrt.atom.v22.03.2.img.gz)
 
 **Installing:**
 
 * You need two USB sticks, one you should put some linux distribution on, the other you should format.  I formatted mine to ext4, but it probably doesn't matter.
-* Download a build.
-* `gunzip openwrt.atom.build.img.*.gz`
-* Copy openwrt.atom.build.########.img to your second USB stick.
+* Download the image from above or do your build.
+* `gunzip openwrt.atom.v22.03.2.img.gz`
+* Copy `openwrt.atom.v22.03.2.img` to your second USB stick.
 * Put your Linux boot stick into one of the USB2.0 slots.  
 * Put the stick with the OpenWRT image on it in the USB3.1 slot.
 * Boot the unit hitting F12 to get to the boot menu, then select the linux boot stick.
@@ -203,11 +182,15 @@ From here, I used gparted to resize the system partitions, because I couldn't se
 * Both of mine were: `/dev/mmcblk0`
 * Find your img file, if you're using mint it'll be in media: `ls -laR /media/mint/`
 * Write the image using `dd`.
-* `sudo dd if=/path/to/openwrt.atom.build.img of=/dev/mmcblk0 bs=4096 status=progress`
+* `sudo dd if=/path/to/openwrt.atom.build.img of=/dev/mmcblk0 bs=512 status=progress`
 * Wait for awhile.
 * Reboot the device removing all USB sticks. I just power cycle it, because I don't care.
 * Setup your network as I desribe in this gist: [OpenWRT on x86_64 - First Boot](https://gist.github.com/pjobson/3584f36dadc8c349fac9abf1db22b5dc#first-boot)
 * You can now open LUCI in your browser by going to whatever IP you set the unit to.
+* Resize your partition.
+    * Reboot back to your LiveUSB
+    * Open gparted and resize the ext4 partition.
+    * NOTE: DO NOT resize it to the full 8GB or it will not boot, keep slightly under 8GB.  I have no clue why.  I left 100MB at the end of my drive and it worked fine.
 
 #### ThinLinux
 
@@ -227,44 +210,4 @@ This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-b
 
 ## Images
 
-### Device
-
-**External**
-
-![Front](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/front.jpg)
-![Rear](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/rear.jpg)
-![Angle](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/angle.jpg)
-
-**Board**
-
-![Top](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/unit-top-full.jpg)
-![Bottom](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/unit-bottom-full.jpg)
-
-**CPU**
-
-![CPU](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/cpu.jpg)
-
-**EMMC**
-
-![EMMC](https://raw.githubusercontent.com/pjobson/dell-wyse-3040-openwrt/main/img/emmc-skhynix-805a.jpg)
-
-**SDIO**
-
-![SDIO](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/sdio-m2.jpg)
-
-**Clear CMOS**
-
-![Clear CMOS](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/clear-cmos.jpg)
-
-**Clear Passwords**
-
-![Clear Passwords](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/passwd-clear.jpg)
-
-### OpenWRT
-
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/neofetch.png)
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/luci_status.png)
-
-### antiX
-
-![](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/img/antix-wyse-3040.png)
+[images](./images.md)
