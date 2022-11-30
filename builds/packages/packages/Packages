@@ -1,0 +1,270 @@
+Package: alsa-lib
+Version: 1.2.6.1-1
+Depends: libc, kmod-sound-core, libpthread, librt
+License: LGPL-2.1-or-later
+Section: libs
+Architecture: x86_64
+Installed-Size: 406076
+Filename: alsa-lib_1.2.6.1-1_x86_64.ipk
+Size: 405663
+SHA256sum: 82d1f323daa07ae9e355523cba50a1368a238b85642aa77fc86f9b5b4dec8f81
+Description:  This is the library package for alsa, needed by some userspace programs.
+ You must have enabled the ALSA support in the kernel.
+
+Package: alsa-ucm-conf
+Version: 1.2.6.2-1
+Depends: libc
+License: BSD-3-Clause
+Section: libs
+Architecture: all
+Installed-Size: 38987
+Filename: alsa-ucm-conf_1.2.6.2-1_all.ipk
+Size: 39515
+SHA256sum: 09a8e8519b8a6b8eb22f85b75db113ac352041b2fa01a33d5d833ff51e5e8b62
+Description:  This is a set of configuration files needed for some ALS utilities like alsactl.
+
+Package: alsa-utils
+Version: 1.2.6-1
+Depends: libc, alsa-lib, alsa-ucm-conf, libncursesw6, libpthread
+License: GPL-2.0-or-later
+Section: sound
+Architecture: x86_64
+Installed-Size: 138384
+Filename: alsa-utils_1.2.6-1_x86_64.ipk
+Size: 139117
+SHA256sum: 911c3945f63f1795658b9cf931b4eac4b542373b1b186b563a998c6a1a6ad2e6
+Description:  ALSA (Advanced Linux Sound Architecture) utilities
+
+Package: bash
+Version: 5.1.16-1
+Depends: libc, libncurses6, libreadline8
+License: GPL-3.0-or-later
+Section: utils
+CPE-ID: cpe:/a:gnu:bash
+Architecture: x86_64
+Installed-Size: 466072
+Filename: bash_5.1.16-1_x86_64.ipk
+Size: 466930
+SHA256sum: 673e53619c89c2c5f602cd7406b2246c4769790f989568f2f161d02b7f1d52a5
+Description:  Bash is an sh-compatible command language interpreter that executes
+ commands read from the standard input or from a file. Bash also
+ incorporates useful features from the Korn and C shells (ksh and csh).
+
+Package: cgi-io
+Version: 2022-08-10-901b0f04-21
+Depends: libc, libubox20220515, libubus20220601
+License: GPL-2.0-or-later
+Section: net
+Architecture: x86_64
+Installed-Size: 8920
+Filename: cgi-io_2022-08-10-901b0f04-21_x86_64.ipk
+Size: 9713
+SHA256sum: e557cf09b80538300eac17054582dbdde10e177017692c6e88782e407a14bb7c
+Description:  This package contains an cgi utility that is useful for up/downloading files
+
+Package: fdk-aac
+Version: 2.0.1-5
+Depends: libc
+License: Fraunhofer-FDK-AAC-for-Android
+Section: sound
+Architecture: x86_64
+Installed-Size: 307607
+Filename: fdk-aac_2.0.1-5_x86_64.ipk
+Size: 308408
+SHA256sum: a2388de49231254effcfb3871b1c2915834f55118d43de5ab68fdb69464dbd03
+Description:  Port of the Fraunhofer FDK AAC Codec Library for Android
+
+Package: ffmpeg
+Version: 5.1-1
+Depends: libc, libpthread, libffmpeg-full
+License: LGPL-2.1-or-later GPL-2.0-or-later LGPL-3.0-or-later
+Section: multimedia
+CPE-ID: cpe:/a:ffmpeg:ffmpeg
+Architecture: x86_64
+Installed-Size: 114365
+Filename: ffmpeg_5.1-1_x86_64.ipk
+Size: 115448
+SHA256sum: 8392a0db583dd4ec2743a96ea80e72b65438eb586897fc38b97806fc2eda0730
+Description:  FFmpeg is a a software package that can record, convert and stream digital
+ audio and video in numerous formats.
+ 
+ FFmpeg licensing / patent issues are complex. It is the reponsibility of the
+ user to understand any requirements in this regard with its usage. See:
+ https://ffmpeg.org/legal.html for further information.
+ .
+ This package contains the FFmpeg command line tool.
+
+Package: ffprobe
+Version: 5.1-1
+Depends: libc, libpthread, libffmpeg-full
+License: LGPL-2.1-or-later GPL-2.0-or-later LGPL-3.0-or-later
+Section: multimedia
+CPE-ID: cpe:/a:ffmpeg:ffmpeg
+Architecture: x86_64
+Installed-Size: 60915
+Filename: ffprobe_5.1-1_x86_64.ipk
+Size: 62043
+SHA256sum: 9da1cd7f9b35a58e1f50187bfaada2446a309d3e694acaa985496621348ec3da
+Description:  FFmpeg is a a software package that can record, convert and stream digital
+ audio and video in numerous formats.
+ 
+ FFmpeg licensing / patent issues are complex. It is the reponsibility of the
+ user to understand any requirements in this regard with its usage. See:
+ https://ffmpeg.org/legal.html for further information.
+ .
+ This package contains the FFprobe command line tool.
+
+Package: htop
+Version: 3.2.1-1
+Depends: libc, libncurses6
+License: GPL-2.0-or-later
+Section: admin
+CPE-ID: cpe:/a:htop:htop
+Architecture: x86_64
+Installed-Size: 104871
+Filename: htop_3.2.1-1_x86_64.ipk
+Size: 105839
+SHA256sum: 8173d4993d790638db22ea8393c3f14507df721ef740d1f5be4d213eb827eed1
+Description:  Htop is an ncursed-based process viewer similar to top, but
+ it allows to scroll the list vertically and horizontally to
+ see all processes and their full command lines.
+
+Package: imagemagick
+Version: 7.0.9-4
+Depends: libc, libltdl7, libpthread, zlib, libfreetype, libpng, libjpeg, libtiff5
+License: Apache-2.0
+Section: multimedia
+CPE-ID: cpe:/a:imagemagick:imagemagick
+Architecture: x86_64
+Installed-Size: 1844769
+Filename: imagemagick_7.0.9-4_x86_64.ipk
+Size: 1837561
+SHA256sum: 1eec15536ebc7e3f366a17bb8d7730568f5a78e031bc5266d48c17c9699b013f
+Description:  ImageMagick is a free and open-source software suite for displaying,
+ converting, and editing raster image and vector image files.
+ NOTE: this package may not be suitable for many embedded devices because
+ of its large size. Consider using extroot or alternatively consider
+ graphicsmagick which is smaller but similar in functionality.
+
+Package: lame-lib
+Version: 3.100-1
+Depends: libc
+License: LGPL-2.0
+Section: sound
+CPE-ID: cpe:/a:lame_project:lame
+Architecture: x86_64
+Installed-Size: 122802
+Filename: lame-lib_3.100-1_x86_64.ipk
+Size: 123683
+SHA256sum: e577748409ff06a7b506beeb61da48a070cae279f95c00e094565547df64e7c0
+Description:  lame mp3 encoder libs
+
+Package: libffmpeg-full
+Version: 5.1-1
+Depends: libc, libpthread, libpthread, zlib, libbz2-1.0, alsa-lib, libgnutls, lame-lib, fdk-aac
+Provides: libffmpeg
+License: LGPL-2.1-or-later GPL-2.0-or-later LGPL-3.0-or-later
+Section: libs
+CPE-ID: cpe:/a:ffmpeg:ffmpeg
+Architecture: x86_64
+Installed-Size: 9877304
+Filename: libffmpeg-full_5.1-1_x86_64.ipk
+Size: 9793699
+SHA256sum: c19e5edeebb501921aee3b8db3797bbe4398045d7ba5e7b19064416361d356aa
+Description:  FFmpeg is a a software package that can record, convert and stream digital
+ audio and video in numerous formats.
+ 
+ FFmpeg licensing / patent issues are complex. It is the reponsibility of the
+ user to understand any requirements in this regard with its usage. See:
+ https://ffmpeg.org/legal.html for further information.
+ .
+ This package contains full-featured FFmpeg shared libraries.
+
+Package: libfreetype
+Version: 2.11.1-1
+Depends: libc, zlib, libpng
+License: FTL GPL-2.0-only MIT ZLIB GPL-3.0-or-later
+Section: libs
+CPE-ID: cpe:/a:freetype:freetype2
+Architecture: x86_64
+Installed-Size: 309294
+Filename: libfreetype_2.11.1-1_x86_64.ipk
+Size: 310031
+SHA256sum: fd496e856b10368529ca9bb7e28e1cbfae8e1749258768edd99189928217f089
+Description:  The FreeType project is a team of volunteers who develop free,
+ portable and high-quality software solutions for digital typography.
+ They specifically target embedded systems and focus on bringing small,
+ efficient and ubiquitous products.
+
+Package: libgnutls
+Version: 3.7.1-2
+Depends: libc, libnettle8, libgmp10, libatomic1
+License: LGPL-2.1-or-later
+Section: libs
+CPE-ID: cpe:/a:gnu:gnutls
+Architecture: x86_64
+Installed-Size: 907045
+Filename: libgnutls_3.7.1-2_x86_64.ipk
+Size: 906623
+SHA256sum: b12fadd821200752be1d6fa23c1eb7b24203c7f219bdb8eedab652ae86161f01
+Description:  GnuTLS is a secure communications library implementing the SSL, TLS
+ and DTLS protocols and technologies around them. It provides a simple
+ C language application programming interface (API) to access the secure
+ communications protocols as well as APIs to parse and write X.509, PKCS12,
+ OpenPGP and other required structures. It is aimed to be portable and
+ efficient with focus on security and interoperability.
+ This package contains the GnuTLS shared library, needed by other programs.
+
+Package: libjpeg-turbo
+Version: 2.1.2-1
+Depends: libc
+Provides: libjpeg
+License: BSD-3-Clause IJG zlib
+Section: libs
+Architecture: x86_64
+Installed-Size: 111828
+Filename: libjpeg-turbo_2.1.2-1_x86_64.ipk
+Size: 111923
+SHA256sum: ef57c244e5147af389b6e7bc00633103c52890fc34eada6ea9d68071c6a5b583
+Description:  libjpeg-turbo is a speed focused fork of libjpeg.
+
+Package: liblo
+Version: 0.31-2
+Depends: libc, libpthread
+License: LGPL-2.1-or-later
+Section: libs
+Architecture: x86_64
+Installed-Size: 26615
+Filename: liblo_0.31-2_x86_64.ipk
+Size: 27354
+SHA256sum: 0f62c3456499e4275ae666f27a6001cf08b53ec48f0d2f1f2545419b220a23ce
+Description:  Lightweight Open Sound Control (OSC) library
+
+Package: libpng
+Version: 1.6.37-11
+Depends: libc, zlib
+License: Libpng GPL-2.0-or-later BSD-3-Clause
+Section: libs
+CPE-ID: cpe:/a:libpng:libpng
+Architecture: x86_64
+Installed-Size: 93226
+Filename: libpng_1.6.37-11_x86_64.ipk
+Size: 94086
+SHA256sum: 11abef0a389fe733af9aa45c324245cae332dc625cce677a3db86107bf681e54
+Description:  A PNG format files handling library
+
+Package: libtiff5
+Version: 4.3.0-3
+Depends: libc, zlib, libjpeg
+Provides: libtiff
+License: BSD-3-Clause
+Section: libs
+ABIVersion: 5
+CPE-ID: cpe:/a:libtiff:libtiff
+Architecture: x86_64
+Installed-Size: 137211
+Filename: libtiff5_4.3.0-3_x86_64.ipk
+Size: 137735
+SHA256sum: 5ec88fece919e9263b009fe3cc868f44447c302d817f97dc1b99996def8c1212
+Description:  TIFF library
+
