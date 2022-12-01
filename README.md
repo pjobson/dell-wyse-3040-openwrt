@@ -8,12 +8,9 @@ I suspect this will work for any Intel Atom based processors, though I have not 
 
 - [Dell Wyze 3040](#dell-wyze-3040)
   * [Notes](#notes)
-    + [Dell Pages](#dell-pages)
-    + [Articles](#articles)
   * [Hardware](#hardware)
   * [Boot Options](#boot-options)
-  * [BIOS Updates](#bios-updates)
-  * [BIOS Setup](#bios-setup)
+  * [BIOS](#bios)
   * [Operating Systems](#operating-systems)
     + [OpenWRT](#openwrt)
       * [Building](#building)
@@ -23,6 +20,7 @@ I suspect this will work for any Intel Atom based processors, though I have not 
     + [Mint](#mint)
     + [antiX Linux](#antix-linux)
     + [VyOS](#vyos)
+    + [Windows](#windows)
   * [Images](#images)
     + [Device](#device)
     + [OpenWRT](#openwrt-1)
@@ -33,64 +31,28 @@ I suspect this will work for any Intel Atom based processors, though I have not 
 
 ### Dell Pages
 
-* [Wyse 3040 Thin Client](https://www.dell.com/en-us/work/shop/wyse-endpoints-and-software/wyse-3040-thin-client/spd/wyse-3040-thin-client)
-* [Wyse 3040 Disassembly and Reassembly](https://www.dell.com/support/manuals/en-us/wyse-3040-thin-client/3040_ug/disassembly-and-reassembly?guid=guid-2832a3ba-4312-4770-98e8-dd0261ca350c&lang=en-us)
-* [Wyse 3040 Client User Guide](https://www.dell.com/support/manuals/en-us/wyse-3040-thin-client/3040_ug/system-specifications?guid=guid-b35dd1df-32f3-4c36-84a9-52d9a5c0810c&lang=en-us)
+[dell pages](./dell_pages.md)
 
 ### Articles
 
-* [Thin Clients Wyse 3040 (N10D): Hardware](https://www.parkytowers.me.uk/thin/wyse/3040/)
-* [Thin Clients Wyse 3040 Disassembly](https://www.parkytowers.me.uk/thin/wyse/3040/disassembly.shtml)
-* [A Baby WYSE, the 3040](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
-* [Install a New OS On a Dell Wyse 3040](https://qubitsandbytes.co.uk/install-a-new-os-on-a-dell-wyse-3040/)
+[articles](./articles.md)
 
 ## Hardware
 
-* **Power:** My device shows 5V @ 3A, I use [this power adapter](https://www.amazon.com/dp/B0877ZTXT2?ref=ppx_yo2ov_dt_b_product_details).
-    * [Video Power Mod, Teardown, UEFI/BIOS Quirks](https://www.youtube.com/watch?v=6Ls7xn4qdlk).
-* **CPU:** [Intel(R) Atom(TM) x5-Z8350 CPU @ 1.44GHz](https://ark.intel.com/content/www/us/en/ark/products/93361/intel-atom-x5z8350-processor-2m-cache-up-to-1-92-ghz.html)
-* **Memory:** 2GB DDR3 1600 MHz Soldered
-* **Drive:** 8GB EMMC SK Hynix H56C4HP4A - There is also a 16GB version of this board.
-* **Audio:** PulseAudio shows:
-    * Intel HDMI/DP LPE Audio - snd_hdmi_lpe_audio
-    * Dell Inc. - Wyse 3040 ThinClient -- CherryTrailCR - snd_soc_sst_cht_bsw_rt5672
-* **USB:** 
-    * 3x USB 2.0
-    * 1x USB 3.1
-* **Video:** 
-    * 2x DisplayPort 
-    * Max Resolution 1920x1080
-    * Intel Corporation Atom Processor x5-E8000 Integrated Graphics Controller
-* **Ethernet:** 1x Ethernet 1 Gbps - Realtek RTL8111/8168/8411
-* **Expansion:** M.2 E-Key
-    * This is NOT a true E-Key slot, it is an *SDIO interface*.
-    * There is more SDIO wifi info in this [FreeBSD article](https://wiki.freebsd.org/SDIO).
-    * I tried various E-Key wifi cards, none worked.
-    * Reference this `lspci` line:
-
-            00:11.0 SD Host controller: Intel Corporation 
-                    Atom/Celeron/Pentium Processor x5-E8000/J3xxx/N3xxx 
-                    Series SDIO Controller (rev 36)
-* **lshw - Hardware** [lshw.txt](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/notes/lshw.txt?token=GHSAT0AAAAAABTRQNXQO5Y66VO6U6DAEJSKYUW4K5A)
-* **lspci - PCI** [lspci.txt](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/notes/lspci.txt?token=GHSAT0AAAAAABTRQNXQLILXPEOHE2AN37DQYUW4LWA)
-* **pacmd - Audio** [pacmd.txt](https://raw.githubusercontent.com/pjobson/openwrt-dell-wyze-3040/main/notes/pacmd.txt?token=GHSAT0AAAAAABTRQNXQB4UFOPRH6KLZF7SUYUXAXAA)
+[hardware](./hardware.md)
 
 ## Boot Options
 
 * F2 - Boots BIOS
 * F12 - Boot Menu
 
-## BIOS Updates
+## BIOS
 
-My unit would not let me update to 1.2.5 from 1.2.4, no clue why. It just showed `<invalid>` in the updater.
+### Updates
 
-* Download from Dell: [https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers](https://www.dell.com/support/home/en-us/product-support/product/wyse-3040-thin-client/drivers)
-* Unzip it if it is zipped.
-* Copy to a USB flash drive, FAT32 formatted.
-* Boot the with F12 key.
-* Follow instructions on screen.
+[bios update](./bios.md)
 
-## BIOS Setup
+### Setup
 
 * Enter BIOS with F12 
 * System Configuration -> USB Configuration, then check **Enable USB Boot Support**
@@ -207,6 +169,16 @@ Dell has their own linux distributino for the Wyze 3040 called ThinLinux.  You c
 ### VyOS
 
 This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
+
+### Windows
+
+Requirements are:
+
+* 1GHz CPU
+* 1GB RAM
+* 16GB HDD
+
+Unless you have the 16GB version of the 3040, it probably won't work.  There's an edition of Win10 called [Tiny10](https://archive.org/details/tiny-10_202105), which you may get lucky with.
 
 ## Images
 
