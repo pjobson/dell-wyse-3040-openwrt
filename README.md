@@ -15,14 +15,14 @@ I suspect this will work for any Intel Atom based processors, though I have not 
   * [BIOS Updates](#bios-updates)
   * [BIOS Setup](#bios-setup)
   * [Operating Systems](#operating-systems)
-    + [Linux](#linux)
-      - [OpenWRT](#openwrt)
-        * [Building](#building)
-        * [My Unofficial Builds](#my-unofficial-builds)
-      - [ThinLinux](#thinlinux)
-      - [Mint](#mint)
-      - [antiX Linux](#antix-linux)
-      - [VyOS](#vyos)
+    + [OpenWRT](#openwrt)
+      * [Building](#building)
+      * [My Unofficial Builds](#my-unofficial-builds)
+      * [Installing](#installing)
+    + [ThinLinux](#thinlinux)
+    + [Mint](#mint)
+    + [antiX Linux](#antix-linux)
+    + [VyOS](#vyos)
   * [Images](#images)
     + [Device](#device)
     + [OpenWRT](#openwrt-1)
@@ -100,13 +100,11 @@ My unit would not let me update to 1.2.5 from 1.2.4, no clue why. It just showed
 
 ## Operating Systems
 
-### Linux
-
-#### OpenWRT
+### OpenWRT
 
 The current build of OpenWRT does not install on the Wyze.  From what I understand, this is due to the default build outputting to Serial.  I built my own version specifiying the Atom processor with no serial output and had some good luck.
 
-##### Building
+#### Building
 
 I'm not an expert on building OpenWRT, this is the first custom build I've done.  I may be missing some stuff or could be wrong about any amount of this.  Feel free to drop a comment/bug/pull request.
 
@@ -117,7 +115,7 @@ binutils bzip2 diff find flex gawk gcc-6+ getopt grep
 install libc-dev libz-dev make4.1+ perl python3.6+ rsync 
 subversion unzip which
 ```
-**Install:**
+**Build:**
 
 I used directions from [OpenWRT Build System Usage](https://openwrt.org/docs/guide-developer/toolchain/use-buildsystem).
 
@@ -166,11 +164,11 @@ make defconfig download clean world -j $(nproc) V=sc
 find . -name "openwrt-x86-64-generic-ext4-combined-efi.img"
 ```
 
-##### My Unofficial Builds
+#### My Unofficial Builds
 
 * [openwrt.atom.v22.03.2.img.gz](https://github.com/pjobson/openwrt-dell-wyze-3040/raw/main/builds/openwrt.atom.v22.03.2.img.gz)
 
-**Installing:**
+#### Installing
 
 * You need two USB sticks, one you should put some linux distribution on, the other you should format.  I formatted mine to ext4, but it probably doesn't matter.
 * Download the image from above or do your build.
@@ -194,19 +192,19 @@ find . -name "openwrt-x86-64-generic-ext4-combined-efi.img"
     * Open gparted and resize the ext4 partition.
     * NOTE: DO NOT resize it to the full 8GB or it will not boot, keep slightly under 8GB.  I have no clue why.  I left 100MB at the end of my drive and it worked fine.
 
-#### ThinLinux
+### ThinLinux
 
 Dell has their own linux distributino for the Wyze 3040 called ThinLinux.  You can download it from their [Support Site](https://www.dell.com/support/home/en-us/drivers/driversdetails?driverid=jrr5m).  The file is `2.2.0.00_3040_16GB_merlin.exe` which you can extract the `img` files from with 7zip, like: `7z x 2.2.0.00_3040_16GB_merlin.exe`.  I have not tested this and I probably won't.
 
-#### Mint
+### Mint
 
 [Linux Mint](https://linuxmint.com/) will boot off the USB stick and I have used the Live USB stick to mess around with the device.  The minimum system requirements for Mint are 2GB of RAM and 20GB of disk space.  The installer will crash shortly after selecting keyboard type.
 
-#### antiX Linux
+### antiX Linux
 
 [antiX](https://antixlinux.com/) is probably a better option as the minimum system requirements are 256MB RAM and 5GB HDD.  This seems to install and run fine, you will need to write the ISO to a USB with [live-usb-maker](https://github.com/MX-Linux/lum-qt-appimage/releases) as the default antiX distribution ISO is legacy boot only.
 
-#### VyOS
+### VyOS
 
 This person has done some work with VyOS. [https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/](https://blog.kroy.io/2020/01/17/the-baby-wyse-the-dell-3040/)
 
