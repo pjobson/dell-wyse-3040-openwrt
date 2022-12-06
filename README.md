@@ -149,6 +149,8 @@ find . -name "openwrt-x86-64-generic-ext4-combined-efi.img"
 * Reboot the device removing all USB sticks. I just power cycle it, because I don't care.
 * Setup your network as I desribe in this gist: [OpenWRT on x86_64 - First Boot](https://gist.github.com/pjobson/3584f36dadc8c349fac9abf1db22b5dc#first-boot)
 * You can now open LUCI in your browser by going to whatever IP you set the unit to.
+* You'll probably want to disable DHCP Server.
+    * Network -> Interfaces -> Edit -> DHCP Server (tab) -> (check) Disable DHCP for this interface
 * Resize your partition.
     * Reboot back to your LiveUSB
     * Open gparted and resize the ext4 partition.
