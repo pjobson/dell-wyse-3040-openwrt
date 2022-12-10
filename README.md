@@ -119,6 +119,8 @@ make kernel_menuconfig -j$(nproc)
 # Save/Exit
 
 # Do the build, it'll take like an hour.
+# It will prompt you several times for several questions
+# I use defaults for all.
 make defconfig download clean world -j $(nproc) V=sc
 
 # You can find the builds in: openwrt/bin/
