@@ -118,6 +118,10 @@ make kernel_menuconfig -j$(nproc)
 #   Processor type and features -> Processor family -> Intel Atom
 # Save/Exit
 
+# Disable DHCP server on LAN
+# If you do not do this, it'll try to serve DHCP from the LAN port which can clobber stuff on your network.
+sed -i "s/config dhcp lan/config dhcp lan\n\toption ignore '1'/" package/network/services/dnsmasq/files/dhcp.conf
+
 # Do the build, it'll take like an hour.
 # It will prompt you several times for several questions
 # I use defaults for all.
@@ -151,8 +155,6 @@ find . -name "openwrt-x86-64-generic-ext4-combined-efi.img"
 * Reboot the device removing all USB sticks. I just power cycle it, because I don't care.
 * Setup your network as I desribe in this gist: [OpenWRT on x86_64 - First Boot](https://gist.github.com/pjobson/3584f36dadc8c349fac9abf1db22b5dc#first-boot)
 * You can now open LUCI in your browser by going to whatever IP you set the unit to.
-* You'll probably want to disable DHCP Server.
-    * Network -> Interfaces -> Edit -> DHCP Server (tab) -> (check) Disable DHCP for this interface
 * Resize your partition.
     * Reboot back to your LiveUSB
     * Open gparted and resize the ext4 partition.
