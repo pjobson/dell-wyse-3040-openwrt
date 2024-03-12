@@ -44,6 +44,7 @@ I suspect this will work for any Intel Atom based processors, though I have not 
 ## Boot Options
 
 * F2 - Boots BIOS
+    * Default BIOS password is **Fireport**.
 * F12 - Boot Menu
 
 ## BIOS
