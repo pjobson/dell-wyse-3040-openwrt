@@ -1,5 +1,16 @@
 # Dell Wyze 3040 
 
+## Note
+
+This guide is out of date.  @boerni667 reported that 23.05.3 works (for the most part) fine on these units.
+
+See: https://github.com/pjobson/dell-wyse-3040-openwrt/issues/3
+
+---
+---
+---
+
+
 This is mainly about building and installing OpenWRT on the Wyse 3040. I have included as much additional information as possible.
 
 I suspect this will work for any Intel Atom based processors, though I have not tested it.  I don't think the standard images are compiled with Atom support.  There's a special flag to toggle in `kernel_menuconfig` to enable Atom specifically.
